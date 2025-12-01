@@ -9,16 +9,24 @@ struct Home: StaticPage {
             Text("Stay in Control of Your Daily Energy Balance")
                 .font(.title1)
                 .fontWeight(.bold)
-                .foregroundStyle(.primary)
+                .horizontalAlignment(.center)
             
             Text("Vaga shows where you are in your day so you can maintain a gentle deficit without dropping too far.")
-                .font(.title4)
-                .foregroundStyle(.secondary)
+                .font(.title3)
+                .foregroundStyle(.gray)
+                .horizontalAlignment(.center)
+            
+            Link(target: "/") {
+                Image("images/badge.svg")
+                    .resizable()
+                    .frame(maxWidth: 300)
+                    .padding()
+            }
         }
         
         Grid(alignment: .center) {
             VStack {
-                Image("images/glm-sh.jpeg")
+                Image("images/balance-sh.jpeg")
                     .resizable()
                     .frame(maxWidth: 315)
                     .cornerRadius(60)
@@ -26,15 +34,22 @@ struct Home: StaticPage {
             }
             
             VStack {
-                Image("images/am-sh.jpeg")
+                Image("images/chat-sh.jpeg")
+                    .resizable()
+                    .frame(maxWidth: 315)
+                    .cornerRadius(60)
+                    .padding()
+            }
+            
+            VStack {
+                Image("images/nut-sh.jpeg")
                     .resizable()
                     .frame(maxWidth: 315)
                     .cornerRadius(60)
                     .padding()
             }
         }
-        .columns(2)
-        
+        .columns(3)
     }
 }
 
