@@ -19,7 +19,7 @@ struct Home: StaticPage {
             Link(target: "/") {
                 Image("images/badge.svg")
                     .resizable()
-                    .frame(maxWidth: 300)
+                    .frame(minWidth: 300)
                     .padding()
             }
         }
