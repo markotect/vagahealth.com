@@ -27,16 +27,27 @@ struct ExampleSite: Site {
     
     var lightTheme = LightTheme()
     var darkTheme = DarkTheme()
+    
+    var staticPages: [any StaticPage] = [
+        Privacy(),
+        Terms()
+    ]
 }
 
 struct LightTheme: Theme {
     var colorScheme: Ignite.ColorScheme = .light
     
     var accent: Color = Color(hex: "#1BAE93")
+    
+    var primary: Color = .black
+    var secondary: Color = .gray
 }
 
 struct DarkTheme: Theme {
     var colorScheme: Ignite.ColorScheme = .dark
     
     var accent: Color = Color(hex: "#5CF0C2")
+    
+    var primary: Color = .white
+    var secondary: Color = .gray
 }

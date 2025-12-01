@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="@markotect" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Terms – Losing, gaining or maintaning?</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://vagahealth.com/terms" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Vaga Health" />
+    <meta property="og:title" content="Terms" />
+    <meta name="twitter:title" content="Terms" />
+    <meta property="og:url" content="https://vagahealth.com/terms" />
+    <meta name="twitter:domain" content="vagahealth.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top material-thin navbar navbar-expand-md">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-center">
+              <li class="nav-item"><a href="/" class="nav-link text-nowrap"><span style="display: inline-flex; align-items: center"><img src="/images/VagaAppIcon-40x40-Dark.png" alt="Vaga app icon" style="width: 60px; height: 60px; margin-right: 10px" /><strong class="fs-2" style="font-weight: 600">Vaga</strong></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content" style="padding-top: 150px">
+      <h1 style="font-weight: 700">Terms of Use</h1>
+      <div>
+        <p><em>Last updated: 1 December 2025</em></p>
+        <p>These Terms of Use (“Terms”) govern your use of Vaga (“the App”). By downloading or using the App, you agree to these Terms. If you do not agree, please do not use Vaga.</p>
+        <hr />
+        <h2>1. Description of the App</h2>Vaga helps users understand their daily energy balance by comparing calories burned and calories consumed. The App integrates with Apple Health to read and write nutrition and energy-related data.
+        <p></p>
+        <p>Vaga does not provide medical advice, diagnosis, or treatment.</p>
+        <hr />
+        <h2>2. Acceptance of Terms</h2>By using Vaga, you confirm that:
+        <ul>
+          <li>You are at least 13 years old.</li>
+          <li>You agree to comply with these Terms and all applicable laws.</li>
+        </ul>
+        <hr />
+        <h2>3. Health and Fitness Disclaimer</h2>
+        <ul>
+          <li>Vaga is intended for general wellness and informational purposes only.</li>
+          <li>The App does <strong>not</strong> provide medical, clinical, or nutritional advice.</li>
+          <li>Always consult a qualified healthcare provider before making changes to diet, exercise, or health routines.</li>
+          <li>Any data shown (calories, macros, estimates) may not be accurate for all individuals and should not replace professional guidance.</li>
+        </ul>
+        <hr />
+        <h2>4. User Responsibilities</h2>You agree to:
+        <ul>
+          <li>Provide accurate information when logging nutrition manually.</li>
+          <li>Use the App in a lawful and responsible manner.</li>
+          <li>Maintain the security of your device and Apple Health data.</li>
+          <li>Understand that the accuracy of displayed data depends on data from Apple Health and your device’s sensors.</li>
+        </ul>
+        <hr />
+        <h2>5. License</h2>Vaga grants you a personal, non-exclusive, non-transferable, revocable license to use the App for your own personal, non-commercial purposes.
+        <p></p>
+        <p>You may not:</p>
+        <ul>
+          <li>Reverse engineer, modify, or redistribute the App.</li>
+          <li>Use the App for any unlawful or unauthorized purpose.</li>
+        </ul>
+        <hr />
+        <h2>6. Health Data</h2>
+        <ul>
+          <li>Health data used by Vaga is stored only on your device through Apple Health.</li>
+          <li>Vaga does not transmit HealthKit data to its servers or to third parties.</li>
+          <li>You control all HealthKit permissions through iOS Settings.</li>
+        </ul>
+        <hr />
+        <h2>7. Termination</h2>We may suspend or terminate your access to the App if we believe you have violated these Terms. You may terminate your use at any time by deleting the App from your device.
+        <hr />
+        <h2>8. Limitation of Liability</h2>To the maximum extent permitted by law:
+        <ul>
+          <li>Vaga is provided “as is” without warranties of any kind.</li>
+          <li>We are not liable for any inaccuracies in data displayed by the App.</li>
+          <li>We are not responsible for health decisions made based on the information in the App.</li>
+          <li>We are not liable for indirect, incidental, or consequential damages.</li>
+        </ul>Some jurisdictions do not allow certain exclusions; if so, these limitations may not apply to you.
+        <hr />
+        <h2>9. Governing Law</h2>These Terms are governed by the laws of the Netherlands, without regard to conflicts of law principles. If local laws require otherwise, the governing law will be that of your country of residence.
+        <hr />
+        <h2>10. Changes to the Terms</h2>We may update these Terms from time to time. The latest version will be available in the App and on our website. Continued use of the App means you accept the updated Terms.
+        <hr />
+        <h2>11. Contact</h2>If you have any questions about these Terms, please contact:
+        <p></p>
+        <p><strong>Vaga Support</strong><br /><strong>Email:</strong> info@vagahealth.com</p>
+      </div>
+    </div>
+    <div>
+      <div class="vstack" style="padding: 20px">
+        <p class="mb-0 align-self-center">nekultura tech 2025</p>
+        <div class="mb-0 align-self-center hstack gap-3">
+          <a href="/privacy" class="mb-0 align-self-center">Privacy</a>
+          <p class="mb-0 align-self-center">|</p>
+          <a href="/terms" class="mb-0 align-self-center">Terms</a>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

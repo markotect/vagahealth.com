@@ -5,22 +5,16 @@ struct Home: StaticPage {
     var title = "Vaga"
 
     var body: some HTML {
-        NavigationBar {
+        VStack(alignment: .center, spacing: 40) {
+            Text("Stay in Control of Your Daily Energy Balance")
+                .font(.title1)
+                .fontWeight(.bold)
+                .foregroundStyle(.primary)
             
-        } logo: {
-            Label {
-                Strong("Vaga")
-                    .fontWeight(.semibold)
-            } icon: {
-                Image("/images/VagaAppIcon-40x40-Dark.png", description: "Vaga app icon")
-                    .frame(width: 30, height: 30)
-            }
+            Text("Vaga shows where you are in your day so you can maintain a gentle deficit without dropping too far.")
+                .font(.title4)
+                .foregroundStyle(.secondary)
         }
-        .navigationItemAlignment(.leading)
-        .position(.fixedTop)
-        .background(.thinMaterial)
-        
-        Spacer(size: 100)
         
         Grid(alignment: .center) {
             VStack {
