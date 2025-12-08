@@ -16,7 +16,7 @@ struct Home: StaticPage {
                 .foregroundStyle(.gray)
                 .horizontalAlignment(.center)
             
-            Link(target: "/") {
+            Link(target: "https://apps.apple.com/us/app/vaga-nutrition-energy/id6755109477") {
                 Image("images/badge.svg")
                     .resizable()
                     .frame(minWidth: 300)
