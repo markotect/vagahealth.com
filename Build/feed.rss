@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vaga Health</title><description></description><link>https://vagahealth.com</link><atom:link
     href="https://vagahealth.com/feed.rss"
     rel="self" type="application/rss+xml"
-/><language>en</language><generator>Ignite v0.6.0</generator></channel></rss>
+/><language>en</language><generator>Ignite v0.6.0</generator><item><guid isPermaLink="true">https://vagahealth.com/releases/1.0</guid><title>1.0 - Introduction</title><link>https://vagahealth.com/releases/1.0</link><description><![CDATA[See if you’re losing, gaining, or maintaining.]]></description><pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate><dc:creator><![CDATA[@markotect]]></dc:creator><category><![CDATA[release]]></category><category><![CDATA[version-1.0]]></category></item></channel></rss>

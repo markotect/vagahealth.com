@@ -30,7 +30,12 @@ struct ExampleSite: Site {
     
     var staticPages: [any StaticPage] = [
         Privacy(),
-        Terms()
+        Terms(),
+        Releases()
+    ]
+    
+    var articlePages: [any ArticlePage] = [
+        ReleaseNotePage()
     ]
 }
 

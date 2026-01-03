@@ -5,25 +5,28 @@ struct MainLayout: Layout {
     var body: some Document {
         Body {
             NavigationBar {
-                Link(target: "/") {
-                    Label {
-                        Strong("Vaga")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                    } icon: {
-                        Image("/images/VagaAppIcon-40x40-Dark.png", description: "Vaga app icon")
-                            .frame(width: 60, height: 60)
-                    }
-                }
+                Link("Releases", target: Releases())
             } logo: {
-                
+                Link(target: "/") {
+                    Span {
+                        Image("/images/VagaAppIcon-40x40-Dark.png", description: "Vaga app icon")
+                            .frame(width: 40, height: 40)
+                        
+                        Strong("Vaga")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .padding(.leading, 16)
+                    }
+                    .class("d-flex align-items-center")
+                }
             }
-            .navigationItemAlignment(.center)
             .position(.fixedTop)
             .background(.thinMaterial)
             
-            content
-                .padding(.top, 150)
+            Section {
+                content
+            }
+            .padding(.top, 150)
             
             Section {
                 VStack(alignment: .center) {
